@@ -15,8 +15,7 @@ export const getPosts = async(): Promise<Post[]> => {
       })
       console.log(response)
       const data = await response.json()
-      console.log(data)
-      return data.photos.map(normalizePost)
+      return data.posts.map(normalizePost)
     } catch (e) {
       console.log(e)
     }

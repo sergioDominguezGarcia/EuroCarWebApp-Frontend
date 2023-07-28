@@ -6,9 +6,9 @@ const useLogic = () => {
   const navigate = useNavigate();
 
   const handleOnSubmit = useCallback(
-    async (values: { email: string; password: string }) => {
+    async (values: { email: string; password: string ; rol: string}) => {
       try {
-        await signup(values.email, values.password);
+        await signup(values.email, values.password, values.rol);
         navigate("/dashboard");
       } catch (e) {
         console.log(e);

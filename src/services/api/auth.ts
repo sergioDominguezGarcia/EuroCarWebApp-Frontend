@@ -1,7 +1,7 @@
-import { getToken, setToken, } from "../storage/token";
+import { removeToken, setToken, } from "../storage/token";
 
 const BASE_URL = "http://localhost:8080/auth";
-const token = getToken();
+
 
 export const login = async (email: string, password: string): Promise<void> => {
   const response = await fetch(`${BASE_URL}/login`, {
@@ -12,6 +12,7 @@ export const login = async (email: string, password: string): Promise<void> => {
     },
   });
   const token = await response.json();
+
   if (token) {
     setToken(token);
   }
@@ -19,10 +20,11 @@ export const login = async (email: string, password: string): Promise<void> => {
 
 export const signup = async (
   email: string,
-  password: string
+  password: string,
+  rol: string
 ): Promise<void> => {
   const response = await fetch(`${BASE_URL}/signup`, {
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email, password, rol }),
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -33,4 +35,8 @@ export const signup = async (
   if (token) {
     setToken(token);
   }
+};
+
+export const logout = async (): Promise<void> => {
+  removeToken();
 };

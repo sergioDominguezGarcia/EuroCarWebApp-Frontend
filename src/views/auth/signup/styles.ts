@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as DefaultLink } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -46,4 +47,17 @@ export const InputError = styled.span`
   font-size: 12px;
   color: red;
   margin-top: 2px;
+`;
+
+export const Link = styled(DefaultLink)`
+  color: ${({ theme }) => theme.colors.blue300};
+  display: block;
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: center;
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.blue900};
+  }
 `;

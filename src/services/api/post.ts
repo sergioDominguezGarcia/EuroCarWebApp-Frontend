@@ -6,16 +6,16 @@ const token = getToken()
 
 export const getPosts = async(): Promise<Post[]> => {
     try {
-      const auth = `Bearer ${token}`
+
       const response = await fetch(BASE_URL, {
         headers: {
-          Authorization: auth,
-          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
-      })
-      console.log(response)
+      });
       const data = await response.json()
-      return data.posts.map(normalizePost)
+
+      return data?.posts?.map(normalizePost)
     } catch (e) {
       console.log(e)
     }

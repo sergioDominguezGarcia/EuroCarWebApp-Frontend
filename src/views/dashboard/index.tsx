@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 import useLogic from './logic'
-import { DashboardContent, PostContainer } from './styles'
+import { DashboardContent, PostContainer , Cards } from './styles'
 import Card from "../../components/card"
 const Dashboard: FC = () => {
   const { isLoading, posts } = useLogic()
@@ -12,9 +12,12 @@ const Dashboard: FC = () => {
   return (
     <DashboardContent>
       <PostContainer>
-        {posts.map((post, index) => (
+        <Cards>    
+          {posts.map((post, index) => (
           <Card key={index} post={post} />
         ))}
+        </Cards>
+
       </PostContainer>
     </DashboardContent>
   )

@@ -3,6 +3,7 @@ import { Props } from './types'
 
 export const Container = styled.button<{ $variant: Props['variant'] }>`
   background-color: white;
+  height: auto;
   border: 1px solid ${({ theme }) => theme.colors.blue300};
   border-radius: 4px;
   color: ${({ theme, $variant }) =>

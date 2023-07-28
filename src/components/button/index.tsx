@@ -16,6 +16,8 @@ const Button: FC<Props> = ({
       type={type}
       onClick={onClick}
     >
+
+      BUTTON
       {children}
     </Container>
   )

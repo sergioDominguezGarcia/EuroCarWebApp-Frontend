@@ -3,7 +3,6 @@ import * as Yup from "yup";
 export const initialValues = {
   email: "",
   password: "",
-  rol:""
 };
 
 export const validationSignupSchema = Yup.object().shape({
@@ -13,7 +12,5 @@ export const validationSignupSchema = Yup.object().shape({
   password: Yup.string()
     .min(4, "too short characters")
     .max(20, "too long characters")
-    .required("required"),
-  rol: Yup.string()
-    .required("required"),
+    .required("required")
 });

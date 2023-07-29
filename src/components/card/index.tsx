@@ -18,7 +18,7 @@ const Card: FC<Props> = ({post}) =>{
         {post.model}
         {post.plateNumber}
         
-        <Button />
+        <Button>Details</ Button>
       </CardFooter>
     </CardContent>
   );

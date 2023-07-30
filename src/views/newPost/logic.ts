@@ -16,7 +16,7 @@ const useLogic = () => {
         console.log(e);
       }
     },
-    [navigate]
+    []
   );
 
   return {

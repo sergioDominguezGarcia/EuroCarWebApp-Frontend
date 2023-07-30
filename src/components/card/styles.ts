@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-
+import { FaHeart } from "react-icons/fa";
+import styled from "styled-components";
+import { Props } from "./types";
 export const CardContent = styled.div`
   border: 1px solid gray;
   border-radius: 4px;
@@ -14,4 +15,8 @@ export const CardHeader = styled.div`
 export const CardFooter = styled.div`
   border-top: 1px solid gray;
   margin-top: 16px;
+`;
+
+export const HeartIcon = styled(FaHeart)<{ isFav: boolean }>`
+  color: ${(props) => (props.isFav ? "red" : "gray")};
 `;

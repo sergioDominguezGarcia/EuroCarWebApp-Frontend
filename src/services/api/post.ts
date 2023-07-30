@@ -76,7 +76,7 @@ export const deletePostById = async (id: string): Promise<boolean> => {
 }
 
 export const togglePostFavByUser = async (id: string): Promise<Post> => {
-  const response = await fetch(`http://localhost:8080/${id}/favs`, {
+  const response = await fetch(`http://localhost:8080/posts/${id}/favs`, {
     body: JSON.stringify(id),
     method: 'POST',
     headers: {

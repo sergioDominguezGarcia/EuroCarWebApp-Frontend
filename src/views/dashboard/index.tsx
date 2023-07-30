@@ -2,7 +2,12 @@ import { FC, memo } from 'react'
 import useLogic from './logic'
 import { DashboardContent, PostContainer , Cards } from './styles'
 import Card from "../../components/card"
+
+
+
+
 const Dashboard: FC = () => {
+  
   const { isLoading, posts } = useLogic()
 
   if (isLoading) {

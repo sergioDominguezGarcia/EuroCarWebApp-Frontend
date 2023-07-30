@@ -18,7 +18,7 @@ export const initialValues = {
   },
 };
 
-export const validationSignupSchema = Yup.object().shape({
+export const validationNewpostSchema = Yup.object().shape({
   name: Yup.string()
     .min(4, "too short characters")
     .max(20, "too long characters")

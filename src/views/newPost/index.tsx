@@ -1,7 +1,7 @@
 import { FC, memo } from "react";
 
 import { Formik } from "formik";
-import { initialValues, validationSignupSchema } from "./constants";
+import { initialValues, validationNewpostSchema } from "./constants";
 import {
   Container,
   Form,
@@ -23,7 +23,7 @@ const NewPost: FC = () => {
     <Container>
       <Formik
         initialValues={initialValues}
-        validationSchema={validationSignupSchema}
+        validationSchema={validationNewpostSchema}
         onSubmit={handleOnSubmit}
         
       >
@@ -37,7 +37,7 @@ const NewPost: FC = () => {
 
               <InputController>
                 <Label>Type</Label>
-                <Input type="string" name="Type" onChange={handleChange} />
+                <Input type="string" name="type" onChange={handleChange} />
               </InputController>
 
               <InputController>

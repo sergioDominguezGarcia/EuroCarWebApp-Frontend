@@ -10,7 +10,6 @@ export const getPosts = async(): Promise<Post[]> => {
       const response = await fetch(BASE_URL, {
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
         },
       });
       const data = await response.json()
@@ -87,3 +86,19 @@ export const togglePostFavByUser = async (id: string): Promise<Post> => {
 
   return normalizePost(data)
 }
+
+
+
+export const getMyUser = async (id: string): Promise<Post> => {
+  const response = await fetch(`http://localhost:8080/users/me`, {
+    body: JSON.stringify(id),
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  const data = await response.json();
+
+  return normalizePost(data);
+};
+

@@ -2,7 +2,7 @@ import { FC, memo } from 'react'
 import useLogic from './logic'
 import { DashboardContent, PostContainer , Cards } from './styles'
 import Card from "../../components/card"
-
+import Button from '../../components/button'
 
 
 
@@ -16,6 +16,8 @@ const Dashboard: FC = () => {
 
   return (
     <DashboardContent>
+      <Button>Profile</Button>
+
       <PostContainer>
         <Cards>    
           {posts.map((post, index) => (

@@ -49,7 +49,7 @@ const NewPost: FC = () => {
                 />
               </InputController>
 
-              <Button type="submit" >Create post</Button>
+              <Button type="button" >Create post</Button>
             </FormContent>
           </Form>
         )}

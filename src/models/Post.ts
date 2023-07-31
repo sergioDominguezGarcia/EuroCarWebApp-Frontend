@@ -1,17 +1,17 @@
 type postResponse = {
-  _id: string;
-  name: string;
-  type: string;
-  model: string;
-  plateNumber: string;
-  km: number;
-  carSeats: number;
-  fuelType: string;
-  gearBoxType: string;
-  description: string;
-  style: string;
-  status: string;
-  availableTimes: string;
+  _id: string
+  name: string
+  type: string
+  model: string
+  plateNumber: string
+  km: number
+  carSeats: number
+  fuelType: string
+  gearBoxType: string
+  description: string
+  style: string
+  status: string
+  availableTimes: string
 };
 
 export type PostInput = {

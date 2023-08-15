@@ -32,21 +32,20 @@ export const getPostById = async (id: string): Promise<Post[]> => {
   return data.map(data)
 }
 
-export const createPost = async (
-  id: string,
-  input: PostInput
-): Promise<Post> => {
-  const response = await fetch(`${BASE_URL}/${id}`, {
+export const createPost = async (input: PostInput): Promise<Post> => {
+  const response = await fetch(BASE_URL, {
     body: JSON.stringify(input),
-    method: 'POST',
+    method: "POST",
     headers: {
-      Authorization: `Bearer ${token}`,
+      authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
     },
-  })
-  const data = await response.json()
+  });
+  const data = await response.json();
 
-  return normalizePost(data)
-}
+  return normalizePost(data);
+};
+
 
 export const updatePost = async (
   id: string,

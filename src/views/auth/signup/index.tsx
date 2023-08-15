@@ -44,6 +44,15 @@ return (
               <Input type="string" name="rol" onChange={handleChange} />
             </InputController>
 
+            {/* <InputController>
+              <Label>Rol</Label>
+              <Input as="select" name="type" onChange={handleChange}>
+                <option value="">Seleccione un tipo</option>
+                <option value="seller">seller</option>
+                <option value="customer">customer</option>
+              </Input>
+            </InputController> */}
+
             <Button type="submit">Crear cuenta</Button>
             <Link to="/login">Log in</Link>
           </FormContent>

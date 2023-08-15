@@ -1,63 +1,89 @@
 import styled from "styled-components";
 import { Link as DefaultLink } from "react-router-dom";
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-`;
+const colors = {
+  primary: "#007bff",
+  secondary: "#0056b3",
+  gray: "#ccc",
+};
+
+const media = {
+  tablet: `@media (max-width: 768px)`,
+};
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  background-color: ${colors.secondary};
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 `;
 
 export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  width: 100%;
 `;
 
 export const InputController = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  width: 80%;
 `;
 
 export const Label = styled.label`
-  color: orange;
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 `;
 
 export const Input = styled.input`
-  width: 300px;
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid ${colors.gray};
   border-radius: 4px;
   font-size: 14px;
-  margin-bottom: 5px;
 `;
 
-export const InputError = styled.span`
-  font-size: 12px;
-  color: red;
-  margin-top: 2px;
-`;
-
-export const Link = styled(DefaultLink)`
-  color: ${({ theme }) => theme.colors.blue300};
-  display: block;
+export const Select = styled.select`
+  width: 100%;
+  padding: 10px;
+  border: 1px solid ${colors.gray};
+  border-radius: 4px;
   font-size: 14px;
-  margin-top: 16px;
-  text-align: center;
-  transition: color 200ms ease-in-out;
+`;
+
+export const Button = styled.button`
+  background-color: ${colors.primary};
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.blue900};
+    background-color: ${colors.secondary};
+  }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 20px;
+  background-color: ${colors.primary};
+  ${media.tablet} {
+    padding: 0 10px;
   }
 `;

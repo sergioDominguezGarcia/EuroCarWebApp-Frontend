@@ -1,18 +1,19 @@
-const TOKEN_KEY = "app_token_1234"
+const USER_TOKEN_KEY = "app_token_1234"
 const USER_ID = "1234"
 
 export const getToken = () => {
-  const value = window.localStorage.getItem(TOKEN_KEY) || ""
-  return value.trim()
-}
+  const response = window.localStorage.getItem(USER_TOKEN_KEY);
+  return response;
+};
 
 export const setToken = (token: string) => {
-  window.localStorage.setItem(TOKEN_KEY, token)
-}
+  window.localStorage.setItem(USER_TOKEN_KEY, token);
+};
 
 export const removeToken = () => {
-  window.localStorage.removeItem(TOKEN_KEY)
-}
+  window.localStorage.removeItem(USER_TOKEN_KEY);
+};
+
 
 export const getUserId = () => {
   const value = window.localStorage.getItem(USER_ID) || ''

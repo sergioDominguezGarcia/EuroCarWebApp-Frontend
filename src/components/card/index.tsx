@@ -1,6 +1,12 @@
 import { FC, memo, useState } from "react";
 import { Props } from "./types";
-import { CardContent, CardHeader, CardFooter, HeartIcon } from "./styles";
+import {
+  CardContent,
+  CardHeader,
+  CardFooter,
+  HeartIcon,
+  ButtonsContainer,
+} from "./styles";
 import Button from "../button";
 import { togglePostFavByUser, deletePostById } from "../../services/api/post";
 import { FiTrash2 } from "react-icons/fi";
@@ -27,11 +33,12 @@ const Card: FC<Props> = ({ post }) => {
 
   return (
     <CardContent>
-      <Button onClick={handleFav}>
+      <ButtonsContainer>      <Button onClick={handleFav}>
         {" "}
         <HeartIcon isFav={isFav} />{" "}
       </Button>
-      <FiTrash2  onClick={handleDelete} />
+      <FiTrash2 onClick={handleDelete} /></ButtonsContainer>
+
       <CardHeader>{post.name}</CardHeader>
       <CardFooter>
         {post.type}

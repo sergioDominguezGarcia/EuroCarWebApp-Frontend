@@ -1,21 +1,27 @@
 type postResponse = {
-  _id: string
-  name: string
-  type: string
-  model: string
-  plateNumber: string
-  km: number
-  carSeats: number
-  fuelType: string
-  gearBoxType: string
-  description: string
-  style: string
-  status: string
-  availableTimes: string
+  _id: string;
+  name: string;
+  type: "car" | "motorcycle" | "van";
+  model: string;
+  plateNumber: string;
+  km: number;
+  carSeats: number;
+  fuelType: "gas" | "electric";
+  gearBoxType: "manual" | "automatic";
+  description: string;
+  style: "4x4" | "coupé" | "sedan" | "compact";
+  status: "oculto" | "activo";
+  availableTimes:
+    | "Monday"
+    | "Tuesday"
+    | "Wednesday"
+    | "Thursday"
+    | "Friday"
+    | "Saturday"
+    | "Sunday";
 };
 
-export type PostInput = {
-  
+export type PostInput = {  
   name: string
   type: string
   model: string

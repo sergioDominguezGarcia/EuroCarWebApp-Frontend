@@ -10,6 +10,7 @@ export const CardContent = styled.div`
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  margin-top: 3rem;
   width: 250px;
 `;
 export const ButtonsContainer = styled.div`

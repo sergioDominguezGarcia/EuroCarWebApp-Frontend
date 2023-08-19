@@ -5,6 +5,7 @@ import {
   PostContainer,
   Cards,
   ButtonsContainer,
+  
 } from "./styles";
 import Card from "../../components/card";
 import Header from "../../components/header";
@@ -38,13 +39,14 @@ const Dashboard: FC = () => {
         </ButtonsContainer>{" "}
       </Header>
 
-      <PostContainer>
+      <PostContainer>        
         <Cards>
           {posts.map((post, index) => (
             <Card key={index} post={post} />
           ))}
         </Cards>
       </PostContainer>
+
     </DashboardContent>
   );
 };

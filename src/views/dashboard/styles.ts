@@ -9,6 +9,7 @@ export const DashboardContent = styled.div`
   height: 100vh;
 `;
 export const PostContainer = styled.div`
+  display: flex;
   margin-top: 50px;
   padding: 16px;
 `;

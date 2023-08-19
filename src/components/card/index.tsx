@@ -44,7 +44,7 @@ const Card: FC<Props> = ({ post }) => {
 
       <CardHeader>{post.name}</CardHeader>
       <CardFooter>
-        {post.type}
+
         {post.model}
         {post.plateNumber}
 

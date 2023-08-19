@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+
+export const DashboardContent = styled.div`
+display: flex;
+
+`
+
+
+
 export const HeaderContainer = styled.header`
   background-color: #333;
   color: #fff;
@@ -10,6 +18,10 @@ export const HeaderContainer = styled.header`
   max-height:3rem ;
   width: 100%;
   position: fixed;
+`;
+
+export const PostContainer = styled.div`
+
 `;
 
 export const Logo = styled.div`

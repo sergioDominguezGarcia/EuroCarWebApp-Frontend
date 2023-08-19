@@ -7,6 +7,7 @@ import {
   ButtonsContainer,
 } from "./styles";
 import Card from "../../components/card";
+import Header from "../../components/header";
 import Button from "../../components/button";
 import { useNavigate } from "react-router-dom";
 
@@ -28,9 +29,14 @@ const Dashboard: FC = () => {
 
   return (
     <DashboardContent>
-      <ButtonsContainer>      <Button>Profile</Button>
-      <Button onClick={goToNewPost}>New Post</Button></ButtonsContainer>
-
+      <Header>
+        {" "}
+        <ButtonsContainer>
+          {" "}
+          <Button>Profile</Button>
+          <Button onClick={goToNewPost}>New Post</Button>
+        </ButtonsContainer>{" "}
+      </Header>
 
       <PostContainer>
         <Cards>

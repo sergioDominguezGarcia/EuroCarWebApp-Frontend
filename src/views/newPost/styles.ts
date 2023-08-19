@@ -52,6 +52,15 @@ export const Input = styled.input`
   font-size: 14px;
 `;
 
+export const Textarea = styled.input`
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: auto; 
+  vertical-align: top;
+`;
+
 export const Select = styled.select`
   width: 100%;
   padding: 10px;

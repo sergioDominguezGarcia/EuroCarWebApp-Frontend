@@ -88,9 +88,9 @@ export const togglePostFavByUser = async (id: string): Promise<Post> => {
 
 
 
-export const getMyUser = async (id: string): Promise<Post> => {
+export const getMyUser = async (): Promise<Post> => {
   const response = await fetch(`http://localhost:8080/users/me`, {
-    body: JSON.stringify(id),
+
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,

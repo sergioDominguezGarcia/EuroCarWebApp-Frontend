@@ -9,6 +9,7 @@ import {
   Input,
   InputController,
   Label,
+  Textarea,
 } from "./styles";
 import useLogic from "./logic";
 import Button from "../../components/button";
@@ -77,7 +78,7 @@ const NewPost: FC = () => {
               </InputController>
               <InputController>
                 <Label>Description</Label>
-                <Input
+                <Textarea
                   type="string"
                   name="description"
                   onChange={handleChange}

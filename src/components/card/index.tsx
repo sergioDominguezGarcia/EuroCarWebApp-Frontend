@@ -33,11 +33,14 @@ const Card: FC<Props> = ({ post }) => {
 
   return (
     <CardContent>
-      <ButtonsContainer>      <Button onClick={handleFav}>
+      <ButtonsContainer>
         {" "}
-        <HeartIcon isFav={isFav} />{" "}
-      </Button>
-      <FiTrash2 onClick={handleDelete} /></ButtonsContainer>
+
+          {" "}
+          <HeartIcon isFav={isFav} onClick={handleFav} />{" "}
+      
+        <FiTrash2 onClick={handleDelete} />
+      </ButtonsContainer>
 
       <CardHeader>{post.name}</CardHeader>
       <CardFooter>
